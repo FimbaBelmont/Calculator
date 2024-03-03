@@ -1,0 +1,84 @@
+* {
+    background-color: #35374B;
+}
+input {
+    font-size: 30px;
+    /* height: 100px; */
+    width:max-content;
+    align-self: center;
+    background-color: #344955;
+    color :#ada754
+}
+
+
+.buttons {
+    font-size: 50px;
+    text-align: center;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    background-color: #344955;
+    padding: 10px;
+    margin-left: 60px;
+    margin-right: 60px;
+    border-color: #ada754;
+    border-style: solid;
+
+}
+#display { 
+    display : flex;
+    font-size: 30px;
+    padding: 30px;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    background-color :#344955;
+    color : #e2d95e;
+    margin-left: 60px;
+    margin-right: 60px;
+    border-radius: 25px;
+    border-color: #ada754;
+    border-style: solid;
+    align-self: center;
+}
+#display > p {
+    background-color: #344955;
+    margin:0px;
+    padding: 0px;
+    text-shadow: #344955;
+}
+.calc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    background-color: #35374B
+}
+
+button {
+    background-color: 50727B;
+    border-radius: 15px;
+    padding: 10px;
+    font-weight: 800;
+    font-size: 30px;
+    width: 40px;
+    height: auto;
+    margin: 5px;
+    color : #ada754
+}
+
+#numbs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.first_row, .second_row, .third_row, .fourth_row 
+{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color: #344955;
+
+
+}
+
