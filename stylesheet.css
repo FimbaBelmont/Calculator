@@ -3,13 +3,11 @@
 }
 input {
     font-size: 30px;
-    /* height: 100px; */
     width:max-content;
     align-self: center;
     background-color: #344955;
     color :#ada754
 }
-
 
 .buttons {
     font-size: 50px;
@@ -46,6 +44,7 @@ input {
     margin:0px;
     padding: 0px;
     text-shadow: #344955;
+    
 }
 .calc {
     display: flex;
@@ -81,4 +80,33 @@ button {
 
 
 }
+
+.shrink {
+    width: 500px;
+    margin: 0 auto;
+
+}
+
+#delete { 
+    width: 60px;
+    align-self: flex-end;
+}
+#last-item {
+    margin: 0px;
+    text-align: center;
+    padding: 0px;
+    align-self: center;
+    justify-self: center;
+
+}
+.top-row {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+}
+.top-row > button{
+    align-self: flex-end;
+    justify-self: end;
+}
+
 

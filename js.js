@@ -13,7 +13,8 @@ function multiply (num1,num2) {
 function divide (num1,num2) {
     return num1/num2
 }
-
+const deletebut = document.querySelector("#delete");
+const lastItem = document.querySelector("#last-item");
 const input =  document.querySelector("input");
 const equal = document.querySelector("#equal");
 const pluss = document.querySelector("#plus");
@@ -22,7 +23,6 @@ const multiplyy = document.querySelector("#multi");
 const dividee = document.querySelector("#divd");
 const resultDisplay = document.querySelector("#display >p");
 const currentDisplay = document.querySelector(".current");
-
 const numbs= document.querySelectorAll(".numbs");
 numbs.forEach (function(numb) {
     numb.addEventListener("click", () => {
@@ -33,24 +33,38 @@ numbs.forEach (function(numb) {
 const numlist= [];
 equal.addEventListener("click", () => {
 createOperator();
-operate(numlist)
+operate(numlist);
+if (numlist.at(-1) === "-" ||numlist.at(-1) === "+" || numlist.at(-1) === "*" || numlist.at(-1) === "/") {numlist.splice(-1,1)}
+console.log
 console.log(numlist)
-resultDisplay.textContent = numlist
+resultDisplay.textContent = numlist.toString().replaceAll(',', '')
+
 })
 
 pluss.addEventListener ("click", ()=> {
+    if (numlist.length>2){operate(numlist)};
     createOperator();
     numlist.push("+")})
 minuss.addEventListener ("click", ()=> {
+    if (numlist.length>2){operate(numlist)};
     createOperator();
     numlist.push("-")})
 multiplyy.addEventListener ("click", ()=> {
+    if (numlist.length>2){operate(numlist)};
     createOperator(); 
     numlist.push("*")})
 dividee.addEventListener ("click", ()=> {
+    if (numlist.length>2){operate(numlist)};
     createOperator();
     numlist.push("/")})
-
+deletebut.addEventListener("click", () => {
+    resultDisplay.textContent = null;
+    num1 = 0 ;
+    num2 = 0;
+    input.value= null;
+    numlist.length = 0;
+    lastItem.textContent =  null;
+})
 
 
 function createOperator() {
@@ -59,6 +73,7 @@ function createOperator() {
     }
     else {
 numlist.push(input.value)};
+lastItem.textContent = numlist.toString().replaceAll(',', '');
 input.value = null;
 console.log(numlist)
 
