@@ -69,7 +69,6 @@ deletebut.addEventListener("click", () => {
 
 function createOperator() {
     if (input.value === "") {
-
     }
     else {
 numlist.push(input.value)};
@@ -102,11 +101,12 @@ function operate (arr) {
         }
     }
     for (let b=0; b<arr.length; b++){
-        if (arr[b]==="+") {
+        if (arr[b]==="+") {if ((arr[b-1].toString().toLowerCase()==="hande" || arr[b-1].toString().toLowerCase()==="emre") && (arr[b+1].toString().toLowerCase()==="hande" || arr[b+1].toString().toLowerCase()==="emre")) {let result = "<3";
+        arr.splice(b-1, 3, result)} else {
             let num1 =parseFloat(arr[b-1]);
             let num2 =parseFloat(arr[b+1]);
             let result = add(num1,num2);
-            arr.splice(b-1, 3, result)
+            arr.splice(b-1, 3, result)}
         }
     }
     for (let c=0; c<arr.length; c++){
